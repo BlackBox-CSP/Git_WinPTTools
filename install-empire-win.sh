@@ -21,4 +21,5 @@ echo -e "\n ${GREEN}[+]${RESET} Installing ${GREEN}Empire${RESET} ~ post-exploit
 git clone -q https://github.com/powershellempire/empire/ /c/opt/empire-git/ || echo -e ' '${RED}'[!] Issue when git cloning'${RESET} 1>&2
 pushd /c/opt/empire-git/ >/dev/null
 git pull -q
+setup/install.sh
 popd >/dev/null
