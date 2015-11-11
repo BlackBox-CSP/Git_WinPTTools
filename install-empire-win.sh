@@ -18,7 +18,7 @@ echo -e "\n ${BLUE}[*]${RESET} ${BOLD}Windows post-install script${RESET}\n"
 ##### Install Empire
 echo -e "\n ${GREEN}[+]${RESET} Installing ${GREEN}Empire${RESET} ~ post-exploitation framework"
 apt-get -y -qq install git || echo -e ' '${RED}'[!] Issue with apt-get'${RESET} 1>&2
-git clone -q https://github.com/powershellempire/empire/ /opt/Windows/empire-git/ || echo -e ' '${RED}'[!] Issue when git cloning'${RESET} 1>&2
-pushd /opt/Windows/empire-git/ >/dev/null
+git clone -q https://github.com/powershellempire/empire/ /opt/empire-git/ || echo -e ' '${RED}'[!] Issue when git cloning'${RESET} 1>&2
+pushd /opt/empire-git/ >/dev/null
 git pull -q
 popd >/dev/null
