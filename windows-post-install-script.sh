@@ -59,6 +59,12 @@ git clone -q https://github.com/besimorhino/powercat/ /c/opt/powercat-git/ || ec
 pushd /c/opt/powercat-git/ >/dev/null
 git pull -q
 popd >/dev/null
+##### Install Powershell Popup
+echo -e "\n ${GREEN}[+]${RESET} Installing ${GREEN}Powershell Popup${RESET} ~ powershell popup attack"
+git clone -q https://github.com/cheetz/PowerShell_Popup/ /c/opt/powershell-popup-git/ || echo -e ' '${RED}'[!] Issue when git cloning'${RESET} 1>&2
+pushd /c/opt/powershell-popup-git/ >/dev/null
+git pull -q
+popd >/dev/null
 ##### Install PowerShell-Scripts
 echo -e "\n ${GREEN}[+]${RESET} Installing ${GREEN}PowerShell-Scripts${RESET} ~ powershell attack scripts"
 git clone -q https://github.com/roo7break/PowerShell-Scripts/ /c/opt/powershell-scripts-git/ || echo -e ' '${RED}'[!] Issue when git cloning'${RESET} 1>&2
