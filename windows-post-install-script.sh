@@ -41,6 +41,12 @@ git clone -q https://github.com/ZilentJack/Get-bADpasswords/ /c/opt/get-bADpassw
 pushd /c/opt/get-bADpasswords-git/ >/dev/null
 git pull -q
 popd >/dev/null
+##### Install Inveigh
+echo -e "\n ${GREEN}[+]${RESET} Installing ${GREEN}Inveigh${RESET} ~ PS responder"
+git clone -q https://github.com/Kevin-Robertson/Inveigh/ /c/opt/inveigh-git/ || echo -e ' '${RED}'[!] Issue when git cloning'${RESET} 1>&2
+pushd /c/opt/Inveigh-git/ >/dev/null
+git pull -q
+popd >/dev/null
 ##### Install Nishang
 echo -e "\n ${GREEN}[+]${RESET} Installing ${GREEN}Nishang${RESET} ~ post-exploitation framework"
 git clone -q https://github.com/samratashok/nishang/ /c/opt/nishang-git/ || echo -e ' '${RED}'[!] Issue when git cloning'${RESET} 1>&2
