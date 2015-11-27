@@ -1,6 +1,7 @@
 #!/bin/bash
 # Git Updater
-# Last updated 09/29/2015
+# Last updated 11/27/2015
+# updated to reflect /c/opt/ install dirs for Git Bash
 
 ##### (Cosmetic) Colour output
 RED="\033[01;31m"      # Issues/Errors
@@ -12,17 +13,17 @@ RESET="\033[00m"       # Normal
 
 ##### Update Git repos 
 ##### only checks for one layer of recursion
-cd /opt
+cd /c/opt
 for f in */
 do
 #echo "$f"
-    if [ ! -d /opt/"$f"/.git ]; then
-        cd /opt/"$f"
+    if [ ! -d /c/opt/"$f"/.git ]; then
+        cd /c/opt/"$f"
         for f2 in */
         do
-            if [ -d /opt/"$f"/"$f2"/.git ]; then
+            if [ -d /c/opt/"$f"/"$f2"/.git ]; then
                 echo -e "\n ${GREEN}[+]${RESET} Updating ${GREEN}"$f2"${RESET} "
-                pushd /opt/"$f"/"$f2" >/dev/null
+                pushd /c/opt/"$f"/"$f2" >/dev/null
                 git pull
                 popd >/dev/null
             fi
@@ -31,7 +32,7 @@ do
     else
         #echo -e "\n ${GREEN}.git${RESET}"
         echo -e "\n ${GREEN}[+]${RESET} Updating ${GREEN}"$f"${RESET} "
-        pushd /opt/"$f" >/dev/null
+        pushd /c/opt/"$f" >/dev/null
         git pull
         popd >/dev/null
     fi
