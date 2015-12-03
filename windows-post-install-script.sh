@@ -16,12 +16,12 @@ echo -e "\n ${BLUE}[*]${RESET} ${BOLD}Windows post-install script${RESET}\n"
 #mkdir /opt/Windows/
 
 ##### Install DSInternals
-#echo -e "\n ${GREEN}[+]${RESET} Installing ${GREEN}DSInternals${RESET} ~ Post-ex powershell scripts"
-#mkdir -p /opt/DSInternals
-#pushd /opt/DSInternals/ >/dev/null
-#wget https://www.dsinternals.com/wp-content/uploads/DSInternals_v2.8.zip
-#7z e DSInternals_v2.8.zip
-#popd >/dev/null
+echo -e "\n ${GREEN}[+]${RESET} Installing ${GREEN}DSInternals${RESET} ~ Post-ex powershell scripts"
+mkdir -p /c/opt/DSInternals
+pushd /c/opt/DSInternals/ >/dev/null
+/c/opt/Git_WinPTTools/wget --no-check-certificate https://www.dsinternals.com/wp-content/uploads/DSInternals_v2.8.zip
+/c/opt/Git_WinPTTools/7z e DSInternals_v2.8.zip
+popd >/dev/null
 ##### Install Empire
 #echo -e "\n ${GREEN}[+]${RESET} Installing ${GREEN}Empire${RESET} ~ post-exploitation framework"
 #apt-get -y -qq install git || echo -e ' '${RED}'[!] Issue with apt-get'${RESET} 1>&2
