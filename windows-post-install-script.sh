@@ -95,4 +95,10 @@ git clone -q https://github.com/trustedsec/spraywmi/ /c/opt/spraywmi-git/ || ech
 pushd /c/opt/spraywmi-git/ >/dev/null
 git pull -q
 popd >/dev/null
+##### Install WMIOps
+echo -e "\n ${GREEN}[+]${RESET} Installing ${GREEN}WMIOps${RESET} ~ Windows WMI post-exploitation toolset"
+git clone -q https://github.com/christruncer/wmiops/ /c/opt/wmiops-git/ || echo -e ' '${RED}'[!] Issue when git cloning'${RESET} 1>&2
+pushd /c/opt/wmiops-git/ >/dev/null
+git pull -q
+popd >/dev/null
 ##### End of TSP adds
