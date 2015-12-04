@@ -79,7 +79,7 @@ git pull -q
 popd >/dev/null
 ##### Install PowerSploit
 echo -e "\n ${GREEN}[+]${RESET} Installing ${GREEN}PowerSploit${RESET} ~ powershell attack framework"
-git clone -q https://github.com/mattifestation/PowerSploit/ /c/opt/powersploit-git/ || echo -e ' '${RED}'[!] Issue when git cloning'${RESET} 1>&2
+git clone -q https://github.com/powershellmafia/PowerSploit/ /c/opt/powersploit-git/ || echo -e ' '${RED}'[!] Issue when git cloning'${RESET} 1>&2
 pushd /c/opt/powersploit-git/ >/dev/null
 git pull -q
 popd >/dev/null
