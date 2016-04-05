@@ -15,6 +15,12 @@ echo -e "\n ${BLUE}[*]${RESET} ${BOLD}Windows post-install script${RESET}\n"
 
 #mkdir /opt/Windows/
 
+##### Install DCEPT
+echo -e "\n ${GREEN}[+]${RESET} Installing ${GREEN}DCEPT${RESET} ~ HoneyHash"
+git clone -q https://github.com/secureworks/dcept/ /c/opt/dcept-git/ || echo -e ' '${RED}'[!] Issue when git cloning'${RESET} 1>&2
+pushd /c/opt/dcept-git/ >/dev/null
+git pull -q
+popd >/dev/null
 ##### Install DSInternals
 echo -e "\n ${GREEN}[+]${RESET} Installing ${GREEN}DSInternals${RESET} ~ Post-ex powershell scripts"
 mkdir -p /c/opt/DSInternals
