@@ -95,6 +95,12 @@ git clone -q https://github.com/PowerShellEmpire/PowerTools/ /c/opt/powertools-g
 pushd /c/opt/powertools-git/ >/dev/null
 git pull -q
 popd >/dev/null
+##### Install PSAttack
+echo -e "\n ${GREEN}[+]${RESET} Installing ${GREEN}PSAttack${RESET} ~ powershell post-exploitaion console (without using powershell.exe)"
+git clone -q https://github.com/jaredhaight/psattack/ /c/opt/psattack-git/ || echo -e ' '${RED}'[!] Issue when git cloning'${RESET} 1>&2
+pushd /c/opt/psattack-git/ >/dev/null
+git pull -q
+popd >/dev/null
 ##### Install SprayWMI
 echo -e "\n ${GREEN}[+]${RESET} Installing ${GREEN}SprayWMI${RESET} ~ Windows WMI post-exploitation equivalent of PSEXEC"
 git clone -q https://github.com/trustedsec/spraywmi/ /c/opt/spraywmi-git/ || echo -e ' '${RED}'[!] Issue when git cloning'${RESET} 1>&2
